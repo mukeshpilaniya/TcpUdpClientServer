@@ -13,6 +13,8 @@ abstract: |
     the security guarantees of a system which is not patched by KASLR.
 ---
 
+<span style="color:red; font-family:Georgia; text-align:center; font-size:2em;">The </span>
+
 \
 
 ![image](iiitb_logo.jpg){width="2in" height="2in"}
