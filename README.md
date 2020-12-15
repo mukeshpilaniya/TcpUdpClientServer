@@ -1,7 +1,9 @@
-### International Institute of Information Technology(IIIT), Bangalore
- <p align="center">
+<p align="center">
+    <b>International Institute of Information Technology(IIIT), Bangalore</b>
+</p>
+<p align="center">
   <img src="https://www.iiitb.ac.in/includefiles/userfiles/images/iiitb_logo.png" width="150" height="120" >
- </p>
+</p>
 <p>
   <p align="center">
     <br>
@@ -20,8 +22,9 @@
     Mukesh Kumar Pilaniya                              Shreyansh Jain
     M.Tech 1 st Year                   M.Tech 1 st Year
     MT2019068                                          MT2019106
-   </pre>
+  </pre>
 </p>
+
 
 ## Contents
 - 1 Introduction
@@ -64,7 +67,7 @@ A operating system provide security to each application using memory isolation t
 In this paper, we present Meltdown, the attack itself is quite complex,therefore we break it down into quite small steps so that each step is easy to understand.(1)(9) Meltdown does not exploit any kind of software vulnerability i.e it does not use or break internal software system but it is a hardware attack and it works on all the major intel system. The major cause of meltdown attack isout-of-order execution.(1)(9)
 Out-of-order execution increases CPU efficiency and allows CPU to execute instruction faster and, in a second half of the paper we have describe it in short. Through Out-of-Order execution we exploit cache side channel to catch data store in L3 cache. However, out-of-order attacks cache side channel and the result allows an attacker to dump whole kernel memory by reading cache memory in an out-of-order execution manner.(1)(9)
 
-###Outline
+### Outline
 - In this section we will describe about
     - Cache Side channel and attacks
     - Out-Of-Order Execution
@@ -226,11 +229,11 @@ Figure 8: Program illustrating Meltdown Attack
 ```
 For executing the meltdown attack first, we need to know address of secret value so, the kernel module saves the address of secret value in kernel buffer at line 41. which we will get it using ‘dmseg‘ command as shown in Figure 9. The next thing is this secret value need to be cached so to achieve this we are creating a file /proc/secretdata at line number 46. Which provide a link to communicate a user level program to kernel module. Therefore, when a user-level program read /proc/secretdata file then it will invoke readproc() function at line 23. The readproc() function will load the secret value (line 25) which is cached by CPU. readproc() function will not return secret value so it does not leak secret value.
 - Compile the kernel module
-<code>make</code>>
+<code>make</code>
 - Install the kernel module
-<code>sudo insmod MeltdownKernel.ko</code>>
+<code>sudo insmod MeltdownKernel.ko</code>
 - Print secret value address
-<code>dmesg</code>>
+<code>dmesg</code>
 
 <!-- <p align="center> <img src=""></p>-->
 ```
